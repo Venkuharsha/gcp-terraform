@@ -4,8 +4,3 @@ provider "google" {
   region      = var.region
   zone        = var.zone
 }
-
-variable "google_credentials" {
-  type = string
-  sensitive = true
-}
