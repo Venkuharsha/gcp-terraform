@@ -24,8 +24,8 @@
 }
 
 resource "google_service_account" "bigit_workbench_svc" {
-  account_id   = "bigit_workbench"
-  display_name = "bigit_workbench"
+  account_id   = "bigit-workbench-svc"
+  display_name = "bigit-workbench-svc"
 }
 
 # Notebook Admin role
