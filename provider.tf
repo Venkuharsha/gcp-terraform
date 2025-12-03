@@ -1,6 +1,5 @@
 provider "google" {
-  credentials = var.google_credentials
-  project     = var.project
-  region      = var.region
-  zone        = var.zone
+  project     = "flash-spot-478811-m2"
+  region      = "us-central1"
+  zone        = "us-central1-b"
 }
