@@ -1,20 +1,4 @@
-resource "google_compute_instance" "default" {
-  name         = "my-instance"
-  machine_type = "n2-standard-2"
-  zone         = "us-central1-a"
-
-  tags = ["foo", "bar"]
-
-  boot_disk {
-    initialize_params {
-      image = "debian-cloud/debian-11"
-      labels = {
-        my_label = "value"
-      }
-    }
-  }
-}
-  resource "google_workbench_instance" "instance" {
+ resource "google_workbench_instance" "instance" {
   name     = "workbench-instance"
   location = "us-central1-a"
 
@@ -40,8 +24,8 @@ resource "google_compute_instance" "default" {
 }
 
 resource "google_service_account" "bigit_workbench_svc" {
-  account_id   = "bigit_workbench_svc"
-  display_name = "bigit_workbench_svc"
+  account_id   = "bigit-workbench-svc"
+  display_name = "bigit-workbench-svc"
 }
 
 # Notebook Admin role
