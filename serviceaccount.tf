@@ -10,12 +10,6 @@ resource "google_project_iam_member" "cf_sa_run_invoker" {
   member  = "serviceAccount:${google_service_account.cf_sa.email}"
 }
 
-resource "google_project_iam_member" "cf_sa_cf_dev" {
-  project = var.project_id
-  role    = "roles/cloudfunctions.developer"
-  member  = "serviceAccount:${google_service_account.cf_sa.email}"
-}
-
 resource "google_project_iam_member" "cf_sa_storage_viewer" {
   project = var.project_id
   role    = "roles/storage.objectViewer"
