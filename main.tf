@@ -1,5 +1,5 @@
 module "cloudfn" {
-  source = "./modules/cloud-function"
+  source  = "app.terraform.io/tlz-venk/Cloud-functions/google"
 
   project_id = var.project_id
   region     = var.region
